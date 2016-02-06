@@ -1,0 +1,38 @@
+<!DOCTYPE>
+<!OWN FC-SYSTEM> <!-- Marked by FC-SYSTEM -->
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>大门监控 - 智能家居平台</title>
+    <link href="style.css" type="text/css" rel="stylesheet"/>
+    <script src="./js/webcam.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jqueryLoader.js"></script>
+</head>
+<body onload="createImageLayer()">
+    <iframe style="width:0; height:0;margin-top:-50px;" name="applyFrame" src="about:blank"></iframe>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("#preLoadTop").slideUp();
+        $("#preLoadBottom").slideUp();
+    });
+    </script>
+    <div id="preLoadTop"></div>
+    <div id="preLoadBottom"></div>
+    <div id="main">
+        <div class="ctrlbg">
+            <form method="post" action="apply.php" target="applyFrame">
+                <div class="title">实 时 监 控 录 像</div>
+                    <div class="webcam_o">
+                        <div id="webcam"></div>
+                     </div>
+                <div class="footer">
+                    <span class="tooltip">镜头控制</span><input type="submit" value="向上" name="action"/> | <input type="submit" value="向下" name="action"/>
+                    <span class="tooltip">其他</span><a href="./">返回主界面</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

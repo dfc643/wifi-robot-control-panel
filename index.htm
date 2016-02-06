@@ -1,0 +1,53 @@
+<!DOCTYPE>
+<!OWN FC-SYSTEM> <!-- Marked by FC-SYSTEM -->
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>控制面板 - 智能家居平台</title>
+    <link href="style.css" type="text/css" rel="stylesheet"/>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jqueryLoader.js"></script>
+</head>
+<body>
+    <iframe style="width:0; height:0;margin-top:-50px;" name="applyFrame" src="about:blank"></iframe>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("#preLoadTop").slideUp();
+        $("#preLoadBottom").slideUp();
+    });
+    </script>
+    <div id="preLoadTop"></div>
+    <div id="preLoadBottom"></div>
+    <div id="main">
+        <div class="ctrlbg">
+            <div class="title">家 庭 控 制 面 板</div>
+            <form method="post" action="apply.php" target="applyFrame" style="margin: 0px;">
+                <div class="ctrlbox">
+                    <div class="button"><input type="submit" value="房间门" name="action"/></div>
+                    <div class="button"><input type="submit" value="室内主灯" name="action"/></div>
+                    <div class="button"><a href="webcam.htm">大门监控</a></div>
+                    <div id="loginBox">
+                        <div class="loginTitle">登陆认证</div>
+                        <div class="loginTable">
+                            <table>
+                                <tr>
+                                    <td>账号</td>
+                                    <td><input name="username" type="text" value="admin"/></td>
+                                </tr>
+                                <tr>
+                                    <td>密码</td>
+                                    <td><input name="password" type="password"/></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="loginTitle">* 用户名密码留空可以查看监控</div>
+                        <div class="loginFinish"><input type="button" value="好的" onclick="$('#loginBox').fadeOut()"/>　　</div>
+                    </div>
+                </div>
+            </form>
+            <div class="footer">全部产品设计：北极光 甜米 甜酒 以及一些小伙伴</div>
+        </div>
+    </div>
+</body>
+</html>
