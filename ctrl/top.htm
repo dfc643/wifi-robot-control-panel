@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!FCSYSTEM wifirobot> <!-- Marked by FC-System -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>智能移动平台 - Powered by FC-System</title>
+    <link type="text/css" rel="stylesheet" href="./include/theme.css"/>
+    <script src="include/auth.js"></script>
+    <script src="include/webcam.js"></script>
+    <script src="include/sersend.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" />
+</head>
+<body onload="auth();createImageLayer();createImageLayer2();serSend('8');">
+    <div id="main">
+        <div class="title">智 能 移 动 平 台</div>
+        <div id="webcam"></div>
+        <div id="webcam_m"></div>
+        <div class="control">
+            <div class="ro_left">
+                <input onclick="serSend('6');" type="button" id="crLight" value="☀"/>
+            </div>
+            <div class="ro_right">
+                <table border="0">
+                    <tr>
+                        <td width="123.6px" height="65px" valign="bottom" align="right"></td>
+                        <td width="123.6px" height="65px" valign="bottom" align="center"><input onclick="serSend('1');" type="button" id="crUp" value="▲" accessKey="i"/></td>
+                        <td width="123.6px" height="65px" valign="center" align="center"></td>
+                    </tr>
+                    <tr>
+                        <td width="123.6px" height="65px" valign="center" align="right"><input onclick="serSend('3');" type="button" id="crLeft" value="◄" accessKey="j"/></td>
+                        <td width="123.6px" height="65px" valign="center" align="center"><input onclick="serSend('5');" type="button" id="crStop" value="Ⓧ" accessKey="m"/></td>
+                        <td width="123.6px" height="65px" valign="center" align="left"><input onclick="serSend('4');" type="button" id="crRight" value="►" accessKey="l"/></td>
+                    </tr>
+                    <tr>
+                        <td width="123.6px" height="65px" valign="center" align="center"></td>
+                        <td width="123.6px" height="65px" valign="top" align="center"><input onclick="serSend('2');" type="button" id="crDown" value="▼" accessKey="k"/></td>
+                        <td width="123.6px" height="65px" valign="center" align="center"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="ro_right_m">
+                <table border="0">
+                    <tr>
+                        <td width="123.6px" height="65px" valign="center" align="center"><input onclick="serSend('1');" type="button" id="crUp" value="↑" accessKey="i"/></td>
+                        <td width="123.6px" height="65px" valign="center" align="center"><input onclick="serSend('2');" type="button" id="crDown" value="↓" accessKey="k"/></td>
+                        <td width="123.6px" height="65px" valign="center" align="center"><input onclick="serSend('3');" type="button" id="crLeft" value="←" accessKey="j"/></td>
+                        <td width="123.6px" height="65px" valign="center" align="center"><input onclick="serSend('4');" type="button" id="crRight" value="→" accessKey="l"/></td>
+                        <td width="123.6px" height="65px" valign="center" align="center"><input onclick="serSend('5');" type="button" id="crStop" value="X" accessKey="m"/></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="copy">FC-System Computer Inc &amp; 甜米工作室</div>
+    </div>
+    <img id="ser" width="1" height="1">
+</body>
+</html>

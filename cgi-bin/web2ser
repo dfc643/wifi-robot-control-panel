@@ -1,0 +1,3 @@
+#!/usr/bin/lua
+io.output("/dev/ttyATH0")
+io.write(os.getenv("QUERY_STRING"))

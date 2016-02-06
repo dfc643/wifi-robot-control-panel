@@ -1,0 +1,104 @@
+/* ==========================================
+样本文件：主界面样式表
+文本版本：1, 0, 0, 1
+字符编码：Unicode UTF-8
+编写人员：dfc643(北极光.Norckon)
+                         http://www.fcsys.us
+=========================================== */
+@charset "utf-8";
+body {
+    background: url('../image/background.jpg');
+    background-position: center center;
+    background-attachment:fixed;
+    top:0; left:0; bottom:0; right:0;
+    font-family: "微软雅黑","Ubuntu","宋体","Meriyo";
+}
+
+#main {
+    position: absolute;
+    width:640px; height:600px;
+    left:50%;
+    margin-top:10px; margin-left:-320px;
+    background:rgba(255,255,255,0.5);
+    box-shadow: 0 0 10px #6c6c6c; border-radius:20px;
+}
+
+.title {
+    position: relative;
+    width:640px; margin-top:10px;
+    text-align:center; font-size:36px;  font-weight: bold;
+    color: #ffffff; text-shadow: 1px 1px 5px #000000;
+}
+
+#webcam {
+    position: absolute;
+    width:640px; height:480px; margin-top:10px;
+    background:#000000;
+}
+
+#webcam_m {
+    display:none;
+    position: absolute;
+    width:300px; height:220px; margin-top:10px;
+    background:#000000;
+}
+
+.control {
+    position: absolute;
+    width:640px;
+    margin-top:280px;
+    z-index:99;
+}
+
+.control .ro_left {
+    position:absolute;
+    margin-left:10px;
+    margin-top:145px;
+}
+
+.control .ro_right {
+    position:absolute;
+    margin-left:440px;
+    margin-top:3px;
+}
+
+.control input {
+    width:48px; height:48px;
+    color:#ffffff; text-shadow:0 0 5px #000000; 
+    font-weight:bold; font-size: 24px;
+    background:rgba(0,0,0,0.3); 
+    border:0px; box-shadow:0 0 10px #00aaff; border-radius:10px;
+    transition:background .3s;
+    margin:5px;
+}
+
+.control input:hover {
+    background:rgba(0,0,0,0.7); 
+}
+
+.copy {
+    position:absolute;
+    width:640px;
+    text-align:center;
+    bottom:18px;
+    color:#ffffff; text-shadow:0 0 5px #000000;
+}
+
+.control .ro_right_m {
+    position:absolute;
+    display:none;
+}
+
+@media screen and (max-width:400px) {
+    #main {width:300px;height:400px;margin-left:-150px;top:50%;margin-top:-200px;}
+    .title, .copy {width:300px;}
+    #webcam {width:300px; height:220px;}
+    .control input {width:45px; height:45px; font-size:24px;}
+    .control {width:300px;margin-top:150px;}
+    .control .ro_left {margin-top:20px;margin-left:5px;}
+    .control .ro_right {display:none;}
+    .control .ro_right_m {display:inline;margin-left:0px;margin-top:80px;}
+    #webcam {display:none;}
+    #webcam_m {display:inline;}
+    body {background-position: center 600px; background-attachment:scroll;}
+}
